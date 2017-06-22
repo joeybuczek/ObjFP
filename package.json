@@ -1,11 +1,20 @@
 {
   "name": "objfp",
   "version": "1.0.0",
-  "description": "A library dedicated to functionalesque programming methods for JavaScript objects.",
+  "description": "A library dedicated to functional-esque programming methods for JavaScript objects.",
   "main": "ObjFP.js",
   "scripts": {
     "test": ""
   },
-  "author": "Joey Buczek <joe.buczek@gmail.com>",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joeybuczek/ObjFP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joeybuczek/ObjFP/issues"
+  },
+  "homepage": "https://github.com/joeybuczek/ObjFP#README",
+  "keywords": ["javascript", "objects", "functional"],
+  "author": "Joey Buczek <joeybuczek@gmail.com>",
+  "license": "MIT"
 }
