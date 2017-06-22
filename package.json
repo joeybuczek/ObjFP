@@ -1,0 +1,11 @@
+{
+  "name": "objfp",
+  "version": "1.0.0",
+  "description": "A library dedicated to functionalesque programming methods for JavaScript objects.",
+  "main": "ObjFP.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Joey Buczek <joe.buczek@gmail.com>",
+  "license": "ISC"
+}
