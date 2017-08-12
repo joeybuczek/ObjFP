@@ -166,3 +166,30 @@ console.log(obj); // {a: 1, b: 2, c: 3, d: 4};
 ```
 
 &nbsp;
+
+**Clean *(Non-Chainable)* Object Return**
+
+In the event that these chainable methods are not desired on the final object return, they can be quickly and easily removed by using the *.clean()* method. Instead of manually deleting the properties from the object, simply add this method to the end of the method chain. The original object is not mutated.
+
+*Note: This does not remove any native prototype methods.*
+
+*Example*
+
+```javascript
+// original object reference
+let obj = {a: 1, b: 2};
+
+// create new object by chaining methods, then return a 'clean' result
+let result = ObjFP.map(obj, val => val * 2)
+				  .filter(val => val > 2)
+                  .clean();
+                  
+console.log(result); // {b: 4}
+console.log(result.hasOwnProperty('map')); // false
+console.log(result.hasOwnProperty('filter')); // false
+console.log(result.hasOwnProperty('reduce')); // false
+console.log(result.hasOwnProperty('clean')); // false
+console.log(obj); // {a: 1, b: 2}
+```
+
+&nbsp;

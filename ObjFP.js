@@ -12,6 +12,13 @@ const returnObject = function (obj) {
     },
     reduce: function (fn, initVal) {
       return objectReduce(objCopy, fn, initVal);
+    },
+    clean: function () {
+      let cleanObj = Object.assign({}, objCopy);
+      delete cleanObj.map;
+      delete cleanObj.filter;
+      delete cleanObj.reduce;
+      return cleanObj;
     }
   };
   let returnObj = Object.assign({}, objCopy, api);
