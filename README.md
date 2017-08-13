@@ -146,9 +146,9 @@ console.log(obj); // {a: 1, b: 2, c: 3, d: 4}
 
 **Chaining ObjFP Methods**
 
-The *ObjFP.map()*, *.filter()*, and *.reduce()* methods can be chained together without the need for nesting or creating separate values from multiple function calls.
+The *ObjFP.map()*, *.filter()*, and *.reduce()* methods can be chained together without the need for nesting or creating separate values from multiple function calls. These functions return a new object with all other methods accessible on the object itself. The difference between these methods and the original methods is that the ones present on the return object need only the callback passed in as a single argument.
 
-Aside from the *.reduce()* method, which only returns a single value, the *.map()* and *.filter()* functions return a new object with all three methods accessible on the object itself. The difference between these methods and the original methods is that the ones present on the return object need only the callback passed in as a single argument (the *initialValue* parameter is also available for *.reduce()*).
+*Note: The initialValue parameter is also available for .reduce(). Additionally for .reduce(), these chainable methods are only available when an object is the returned value.*
 
 *Example:*
 

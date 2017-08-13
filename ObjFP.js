@@ -77,7 +77,9 @@ const objectReduce = function (obj, fn, initVal) {
   } else {
     throw new Error('Callback function was not provided');
   }
-  return returnVal;
+  return (typeof returnVal === 'object' && !Array.isArray(returnVal))
+            ? returnObject(returnVal)
+            : returnVal;
 };
 
 // return api
