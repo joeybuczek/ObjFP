@@ -8,6 +8,12 @@ A library dedicated to functional-esque programming methods for JavaScript objec
 const ObjFP = require('objfp');
 ```
 
+Or include as a global:
+
+```html
+<script src="[path_to_module]/ObjFP.js"></script>
+```
+
 &nbsp;
 
 ## Methods
@@ -158,8 +164,8 @@ let obj = {a: 1, b: 2, c: 3, d: 4};
 
 // create an accumulated value using all three methods, providing an initial value for the reduce() method
 let result = ObjFP.map(obj, val => val * 2)
-				  .filter(val => val > 4)
-                  .reduce((acc, curr) => acc + curr, 10);
+  .filter(val => val > 4)
+  .reduce((acc, curr) => acc + curr, 10);
 
 console.log(result); // 24
 console.log(obj); // {a: 1, b: 2, c: 3, d: 4};
@@ -181,8 +187,8 @@ let obj = {a: 1, b: 2};
 
 // create new object by chaining methods, then return a 'clean' result
 let result = ObjFP.map(obj, val => val * 2)
-				  .filter(val => val > 2)
-                  .clean();
+  .filter(val => val > 2)
+  .clean();
                   
 console.log(result); // {b: 4}
 console.log(result.hasOwnProperty('map')); // false
